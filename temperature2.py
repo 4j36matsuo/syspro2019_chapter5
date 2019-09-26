@@ -4,6 +4,7 @@ from smbus2 import SMBus
 import time
 import datetime
 import json
+from collections import OrderedDict
 
 bus_number  = 1
 i2c_address = 0x76
@@ -136,7 +137,8 @@ def setup():
 
 def main():
 	i=0
-	dic={}
+	dic=collections.OrderedDict()
+	temp=collections.OrderedDict()
 	while True:
 		print i
 		dt_now=datetime.datetime.now()
