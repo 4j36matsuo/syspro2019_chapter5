@@ -137,6 +137,7 @@ def setup():
 def main():
 	i=0
 	while True:
+		print i
 		dt_now=datetime.datetime.now()
 		dt_now=dt_now.strftime('%Y-%m-%d %H:%M:%S')
 		datas=readData()
@@ -152,6 +153,7 @@ def main():
 		json.dump(dic,file,indent=3)
 		i+=1
 		time.sleep(10)
+		
 
 
 setup()
