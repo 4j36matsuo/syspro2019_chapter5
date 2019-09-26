@@ -136,12 +136,13 @@ def setup():
 
 def main():
 	i=0
+	dic={}
 	while True:
 		print i
 		dt_now=datetime.datetime.now()
 		dt_now=dt_now.strftime('%Y-%m-%d %H:%M:%S')
 		datas=readData()
-		dic = {
+		temp = {
 			"id"+str(i):{
 				"time":dt_now,
 				"temp":datas[0],
@@ -149,6 +150,7 @@ def main():
 				"hum":datas[2]
 			}
 		}
+		dic.update(temp)
 		file=open('data.json','w')
 		json.dump(dic,file,indent=3)
 		i+=1
