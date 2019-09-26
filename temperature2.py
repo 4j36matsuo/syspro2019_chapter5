@@ -4,7 +4,7 @@ from smbus2 import SMBus
 import time
 import datetime
 import json
-from collections import OrderedDict
+import collections
 
 bus_number  = 1
 i2c_address = 0x76
