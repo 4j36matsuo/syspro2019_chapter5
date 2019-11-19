@@ -144,4 +144,5 @@ while True:
 			readData()
 		except KeyboardInterrupt:
 			pass
+	print""
 	time.sleep(10)
