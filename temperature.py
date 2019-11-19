@@ -138,9 +138,10 @@ def setup():
 setup()
 get_calib_param()
 
-
-if __name__ == '__main__':
-	try:
-		readData()
-	except KeyboardInterrupt:
-		pass
+while True:
+	if __name__ == '__main__':
+		try:
+			readData()
+		except KeyboardInterrupt:
+			pass
+	sleep(10)
