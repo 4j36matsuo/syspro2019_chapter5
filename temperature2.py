@@ -150,7 +150,7 @@ def main():
 				"temp":datas[0],
 				"pres":datas[1],
 				"hum":datas[2]
-			},
+			}
 		}
 		file=open('data.json','w')
 		json.dump(dic,file,indent=3)
