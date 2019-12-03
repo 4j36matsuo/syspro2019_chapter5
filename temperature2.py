@@ -68,8 +68,7 @@ def readData():
 	temp_raw = (data[3] << 12) | (data[4] << 4) | (data[5] >> 4)
 	hum_raw  = (data[6] << 8)  |  data[7]
 	
-	datas=[
-		get_T(temp_raw),get_P(pres_raw),get_H(hum_raw)]
+	datas=[get_T(temp_raw),get_P(pres_raw),get_H(hum_raw)]
 	return datas
 
 def get_P(adc_P):
@@ -142,11 +141,11 @@ def main():
 		time=dt_now.strftime('%Y-%m-%d %H:%M:%S')
 		datas=readData()
 		dic = {
-			"id"+i:{
+			"id"+str(i):{
 				"time":time,
-				"temp":""+str(datas[0]),
-				"pres":""+str(datas[1]),
-				"hum":""+str(datas[2])
+				"temp":datas[0],
+				"pres":datas[1],
+				"hum":datas[2]
 			}
 		}
 		file=open('data.json','w')
