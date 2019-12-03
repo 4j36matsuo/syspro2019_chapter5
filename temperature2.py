@@ -142,7 +142,7 @@ def main():
 	while True:
 		dt_now=datetime.datetime.now()
 		time=dt_now.strftime('%Y-%m-%d %H:%M:%S')
-		datas=readData:
+		datas=readData():
 		while True:
 		dic = {
 			"id"+i:{
