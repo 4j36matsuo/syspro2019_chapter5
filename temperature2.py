@@ -68,11 +68,9 @@ def readData():
 	temp_raw = (data[3] << 12) | (data[4] << 4) | (data[5] >> 4)
 	hum_raw  = (data[6] << 8)  |  data[7]
 	
-	return [
-		get_T(temp_raw),
-		get_P(pres_raw),
-		get_H(hum_raw)
-	]
+	datas=[
+		get_T(temp_raw),get_P(pres_raw),get_H(hum_raw)]
+	return datas
 
 def get_P(adc_P):
 	global  t_fine
@@ -146,9 +144,9 @@ def main():
 		dic = {
 			"id"+i:{
 				"time":time,
-				"temp":datas[0],
-				"pres":datas[1],
-				"hum":datas[2]
+				"temp":str(datas[0]),
+				"pres":str(datas[1]),
+				"hum":str(datas[2])
 			}
 		}
 		file=open('data.json','w')
