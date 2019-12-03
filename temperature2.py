@@ -138,11 +138,11 @@ def main():
 	i=0
 	while True:
 		dt_now=datetime.datetime.now()
-		time=dt_now.strftime('%Y-%m-%d %H:%M:%S')
+		dt_now=dt_now.strftime('%Y-%m-%d %H:%M:%S')
 		datas=readData()
 		dic = {
 			"id"+str(i):{
-				"time":time,
+				"time":dt_now,
 				"temp":datas[0],
 				"pres":datas[1],
 				"hum":datas[2]
