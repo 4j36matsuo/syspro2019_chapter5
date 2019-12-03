@@ -144,9 +144,9 @@ def main():
 		dic = {
 			"id"+i:{
 				"time":time,
-				"temp":str(datas[0]),
-				"pres":str(datas[1]),
-				"hum":str(datas[2])
+				"temp":""+str(datas[0]),
+				"pres":""+str(datas[1]),
+				"hum":""+str(datas[2])
 			}
 		}
 		file=open('data.json','w')
