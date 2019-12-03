@@ -143,8 +143,14 @@ def main():
 		dt_now=datetime.datetime.now()
 		time=dt_now.strftime('%Y-%m-%d %H:%M:%S')
 		datas=readData()
-		while True:
-		dic = {"id"+i:{"time":time,"temp":datas[0],"pres":datas[1],"hum":datas[2]}}
+		dic = {
+			"id"+i:{
+				"time":time,
+				"temp":datas[0],
+				"pres":datas[1],
+				"hum":datas[2]
+			}
+		}
 		file=open('data.json','w')
 		json.dump(dic,file,indent=3)
 		i+=1
