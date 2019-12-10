@@ -138,14 +138,13 @@ def setup():
 def main():
 	i=0
 	dic=collections.OrderedDict()
-	d1=collections.OrderedDict()
-	d2=collections.OrderedDict()
 	while True:
 		print i
 		dt_now=datetime.datetime.now()
 		now=dt_now.strftime('%Y-%m-%d %H:%M:%S')
 		datas=readData()
-		
+		d1=collections.OrderedDict()
+		d2=collections.OrderedDict()
 		d2['time']=now
 		d2['temp']=datas[0]
 		d2['pres']=datas[1]
