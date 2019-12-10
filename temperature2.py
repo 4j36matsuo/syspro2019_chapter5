@@ -150,7 +150,8 @@ def main():
 		d2['temp']=datas[0]
 		d2['pres']=datas[1]
 		d2['hum']=datas[2]
-		d1['id'+i]=d2
+		id="id"+i
+		d1[id]=d2
 		
 		dic.update(d1)
 		file=open('data.json','w')
