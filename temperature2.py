@@ -150,7 +150,7 @@ def main():
 		d2['temp']=datas[0]
 		d2['pres']=datas[1]
 		d2['hum']=datas[2]
-		id="id"+i
+		id="id"+str(i)
 		d1[id]=d2
 		
 		dic.update(d1)
