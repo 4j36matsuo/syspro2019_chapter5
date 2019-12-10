@@ -143,10 +143,10 @@ def main():
 	while True:
 		print i
 		dt_now=datetime.datetime.now()
-		time=dt_now.strftime('%Y-%m-%d %H:%M:%S')
+		now=dt_now.strftime('%Y-%m-%d %H:%M:%S')
 		datas=readData()
 		
-		d2['time']=time
+		d2['time']=now
 		d2['temp']=datas[0]
 		d2['pres']=datas[1]
 		d2['hum']=datas[2]
