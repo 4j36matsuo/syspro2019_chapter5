@@ -138,21 +138,21 @@ def setup():
 def main():
 	i=0
 	dic=collections.OrderedDict()
-	temp=collections.OrderedDict()
+	d1=collections.OrderedDict()
+	d2=collections.OrderedDict()
 	while True:
 		print i
 		dt_now=datetime.datetime.now()
 		dt_now=dt_now.strftime('%Y-%m-%d %H:%M:%S')
 		datas=readData()
-		temp = {
-			"id"+str(i):{
-				"time":dt_now,
-				"temp":datas[0],
-				"pres":datas[1],
-				"hum":datas[2]
-			}
-		}
-		dic.update(temp)
+		
+		d2['time']=dt_now
+		d2['temp']=datas[0]
+		d2['pres']=datas[1]
+		d2['hum']=datas[2]
+		d1['id']=d2
+		
+		dic.update(d1)
 		file=open('data.json','w')
 		json.dump(dic,file,indent=3)
 		i+=1
